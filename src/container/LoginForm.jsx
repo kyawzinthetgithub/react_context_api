@@ -61,7 +61,7 @@ export default function LoginForm() {
               )}
             </div>
             <div className="grid mt-5">
-              <button className="fluid ui button blue px-5 py-2 rounded text-white">
+              <button className="fluid ui button blue px-5 py-2 rounded text-white cursor-pointer">
                 Submit
               </button>
             </div>
