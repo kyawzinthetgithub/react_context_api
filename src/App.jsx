@@ -1,11 +1,14 @@
 import Auth from "./container/Auth";
 import Header from "./container/header";
+import { UserContextProvider } from "./context/userContext";
 
-export default function App(){
+export default function App() {
   return (
     <div className="">
-      <Header/>
-      <Auth />
+      <UserContextProvider>
+        <Header />
+        <Auth />
+      </UserContextProvider>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
+import { UseUserContext } from "../context/userContext";
 
 export default function LoginForm() {
+    const {login} = UseUserContext();
   const {
     register,
     handleSubmit,
@@ -8,10 +10,10 @@ export default function LoginForm() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("Form data", data);
+    login(data.username);
   };
 
-  console.log(errors);
+  errors && console.log(errors);
 
   return (
     <>
